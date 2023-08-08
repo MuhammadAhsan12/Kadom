@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Grid, Paper, Typography, TextField, Button } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Grid, Paper, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+import OtpInput from 'react-otp-input';
 
 // Styled component for the container of the Verification page
 const VerificationContainer = styled('div')({
@@ -55,25 +56,6 @@ const MessageTypography = styled(Typography)(({ theme }) => ({
     width: '355px',
 }));
 
-// Styled component for the form input fields
-const FormField = styled(TextField)(({ theme }) => ({
-    marginBottom: theme.spacing(1.5),
-    display: 'flex',
-    width: '65px',
-    margin: '16px 11px',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: '36px',
-    fontFamily: 'Open Sans',
-    fontWeight: '400',
-}));
-
-// Styled component for the code input container
-const CodeInput = styled(Grid)(({ theme }) => ({
-    display: 'flex',
-    // gap: '1px',
-}));
-
 // Styled component for the counter text
 const CounterTypography = styled(Grid)(({ theme }) => ({
     textAlign: 'center',
@@ -122,13 +104,28 @@ const ResendLink = styled(Link)(({ theme }) => ({
 const Verification = () => {
     // State variable to track whether to apply red border style or not
     const [isRed, setIsRed] = useState(false);
+    const [counter, setCounter] = useState(30);
+    const [OTP, setOTP] = useState("");
+    // const [redirectSuccess, setRedirectSuccess] = useState(false);
 
     // Click event handler for the "CONTINUE" button
     const handleClick = () => {
-        // Assuming there is some logic here to verify the code
         // For demonstration purposes, we will just apply red border on click
-        setIsRed(true);
+        OTP === '1111' ?  window.location.href = '/Success' : setIsRed(true);
     };
+
+    function handleChange(OTP) {
+        setOTP(OTP);
+    }
+
+    useEffect(() => {
+        if (counter > 0 && !isRed) {
+            const timer = setTimeout(() => {
+                setCounter(counter - 1);
+            }, 1000); // Decrease counter every 1 second
+            return () => clearTimeout(timer);
+        }
+    }, [counter, isRed]);
 
     return (
         <VerificationContainer>
@@ -156,43 +153,37 @@ const Verification = () => {
                                 </MessageTypography>
                             </Grid>
                             {/* Code input fields */}
-                            <CodeInput spacing={2} direction="row">
-                                <Grid item xs={3}>
-                                    <FormField
-                                        fullWidth
-                                        inputProps={{ maxLength: 1 }}
-                                        style={isRed ? { border: '2px solid #F2451C', borderRadius: '10px' } : {}}
-                                    />
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <FormField
-                                        fullWidth
-                                        inputProps={{ maxLength: 1 }}
-                                        style={isRed ? { border: '2px solid #F2451C', borderRadius: '10px' } : {}}
-                                    />
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <FormField
-                                        fullWidth
-                                        inputProps={{ maxLength: 1 }}
-                                        style={isRed ? { border: '2px solid #F2451C', borderRadius: '10px' } : {}}
-                                    />
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <FormField
-                                        fullWidth
-                                        inputProps={{ maxLength: 1 }}
-                                        style={isRed ? { border: '2px solid #F2451C', borderRadius: '5px' } : {}}
-                                    />
-                                </Grid>
-                            </CodeInput>
+
+
+                            <OtpInput
+                                value={OTP}
+                                onChange={handleChange}
+                                numInputs={4}
+                                inputStyle={{
+                                    // marginBottom: ,
+                                    display: 'flex',
+                                    width: '65px',
+                                    height: '56px',
+                                    margin: '15px 9px',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    fontSize: '36px',
+                                    fontFamily: 'Open Sans',
+                                    fontWeight: '400',
+                                    borderRadius: '5px',
+                                    outline: "#f6f6f6",
+                                    border: isRed || counter === 0 ? '2px solid #F2451C' : '1px solid #9BADCA',
+                                }}
+                                renderInput={(props) => <input {...props} />}
+                            />
                             <Grid item>
                                 <CounterTypography
                                     variant="h6"
                                     color="primary"
-                                    style={isRed ? { backgroundColor: '#F2451C' } : { backgroundColor: '#1FBBC2', color: '#FFFFFF' }}
+                                    style={isRed || counter === 0 ? { backgroundColor: '#F2451C' } : { backgroundColor: '#1FBBC2', color: '#FFFFFF' }}
                                 >
-                                    Counter: 30 sec
+                                    {/* {counter} */}
+                                    { isRed || counter === 0 ? "Wrong OTP entered" : `00:${counter < 10 ? `0${counter}` : counter}` }
                                 </CounterTypography>
                             </Grid>
                             {/* "CONTINUE" button */}
@@ -202,7 +193,7 @@ const Verification = () => {
                                 </RoundedButton>
                             </Grid>
                             {/* "Resend" link */}
-                            <Grid item>
+                            <Grid item  style={{ textAlign: 'center', alignItems: 'center', }}>
                                 <ResendLink to="/ForgetPassword">If you didn’t receive a code! Resend</ResendLink>
                             </Grid>
                         </Grid>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Paper, Typography, TextField, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 // Styled component for the container of the ForgetPassword page
 const ForgetPasswordContainer = styled('div')({
@@ -125,9 +126,11 @@ const ForgetPassword = () => {
               </Grid>
               {/* Button for continuing the process */}
               <Grid item>
-                <RoundedButton variant="contained" color="primary" fullWidth>
-                  CONTINUE
-                </RoundedButton>
+                <Link to="/NewPasswordField"  style={{ textDecoration: 'none' }}>
+                  <RoundedButton variant="contained" color="primary" fullWidth>
+                    CONTINUE
+                  </RoundedButton>
+                </Link>
               </Grid>
             </Grid>
           </ForgetPasswordForm>

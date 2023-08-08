@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Paper, Typography, TextField, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 // Styled component for the container of the New Password page
 const NewPasswordFieldContainer = styled('div')({
@@ -129,15 +130,17 @@ const NewPasswordField = () => {
               </Grid>
               {/* Update Password button */}
               <Grid item>
+                <Link to="/Verification"  style={{ textDecoration: 'none' }}>
                 <RoundedButton variant="contained" color="primary" fullWidth>
                   UPDATE PASSWORD
                 </RoundedButton>
-              </Grid>
+              </Link>
             </Grid>
-          </NewPasswordFieldForm>
         </Grid>
-      </Grid>
-    </NewPasswordFieldContainer>
+      </NewPasswordFieldForm>
+    </Grid>
+      </Grid >
+    </NewPasswordFieldContainer >
   );
 };
 

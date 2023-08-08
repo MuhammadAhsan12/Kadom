@@ -103,7 +103,7 @@ const SignInPage = () => {
                 <TitleTypography variant="h6" color="primary">Sign In</TitleTypography>
               </Grid>
               {/* Form input field for email */}
-              <Grid item>
+              <Grid item> 
                 <FormLabelTypography>Email Address</FormLabelTypography>
                 <FormField label="@" fullWidth />
               </Grid>
@@ -122,7 +122,7 @@ const SignInPage = () => {
                     />
                   </Grid>
                   <Grid item>
-                    <Link to="/ForgetPassword">
+                    <Link to="/ForgetPassword"  style={{ textDecoration: 'none' }}>
                       <Typography variant="body2" color="primary">
                         Forgot Password?
                       </Typography>

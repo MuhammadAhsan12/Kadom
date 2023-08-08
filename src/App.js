@@ -9,6 +9,7 @@ import "./App.css";
 import SignIn from "./components/SignInPage";
 import Verification from "./components/Verification";
 import NewPasswordField from "./components/NewPasswordField";
+import Success from "./components/Success"
 import MainScreen from "./screens/DashboardScreens/MainScreen";
 import CustomerScreen from "./screens/DashboardScreens/CustomerScreen";
 import ServiceProviderScreen from "./screens/DashboardScreens/ServiceProviderScreen";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
         <Route path="/Verification" element={<Verification />} />
         <Route path="/NewPasswordField" element={<NewPasswordField />} />
+        <Route path="/Success" element={<Success />} />
         <Route path="/dashboard" element={<Navigate to="/dashboard/main" />} />
         <Route path="/dashboard/profile" element={<ProfileScreen />} />
         <Route path="/dashboard/main" element={<MainScreen />} />
