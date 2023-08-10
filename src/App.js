@@ -16,8 +16,12 @@ import ServiceProviderScreen from "./screens/DashboardScreens/ServiceProviderScr
 import JobsManagementScreen from "./screens/DashboardScreens/JobsManagementScreen";
 import ServicesManagementMainScreen from "./screens/DashboardScreens/ServicesManagementMainScreen";
 import ServicesManagementHomeScreen from "./screens/DashboardScreens/ServicesManagementHomeScreen";
-import PrivacyPolicyScreen from "./screens/DashboardScreens/PrivacyPolicyScreen";
-import TermsScreen from "./screens/DashboardScreens/TermsScreen";
+import PrivacyPolicyScreen from "./screens/DashboardScreens/PrivacyScreen/PrivacyScreen";
+import PrivacyScreenEdit from "./screens/DashboardScreens/PrivacyScreen/PrivacyScreenEdit";
+import PrivacyScreenAdd from "./screens/DashboardScreens/PrivacyScreen/PrivacyScreenAdd";
+import TermsScreen from "./screens/DashboardScreens/TermsScreen/TermsScreen";
+import TermsScreenEdit from "./screens/DashboardScreens/TermsScreen/TermsScreenEdit";
+import TermsScreenAdd from "./screens/DashboardScreens/TermsScreen/TermsScreenAdd";
 import ProfileScreen from "./screens/DashboardScreens/ProfileScreen/ProfileScreen";
 
 function App() {
@@ -38,8 +42,12 @@ function App() {
         <Route path="/dashboard/jobsmanagement" element={<JobsManagementScreen />} />
         <Route path="/dashboard/servicesmanagement/main" element={<ServicesManagementMainScreen />} />
         <Route path="/dashboard/servicesmanagement/homescreen" element={<ServicesManagementHomeScreen />} />
-        <Route path="/dashboard/privacypolicy" element={<PrivacyPolicyScreen/>} />
+        <Route path="/dashboard/privacypolicy" element={<PrivacyPolicyScreen />} />
+        <Route path="/dashboard/privacypolicy/edit" element={<PrivacyScreenEdit />} />
+        <Route path="/dashboard/privacypolicy/add" element={<PrivacyScreenAdd />} />
         <Route path="/dashboard/terms" element={<TermsScreen />} />
+        <Route path="/dashboard/terms/edit" element={<TermsScreenEdit />} />
+        <Route path="/dashboard/terms/add" element={<TermsScreenAdd />} />
       </Routes>
     </Router>
     // Routing section End
