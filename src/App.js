@@ -23,6 +23,7 @@ import TermsScreen from "./screens/DashboardScreens/TermsScreen/TermsScreen";
 import TermsScreenEdit from "./screens/DashboardScreens/TermsScreen/TermsScreenEdit";
 import TermsScreenAdd from "./screens/DashboardScreens/TermsScreen/TermsScreenAdd";
 import ProfileScreen from "./screens/DashboardScreens/ProfileScreen/ProfileScreen";
+import JobsDetailsSchreen from "./screens/DashboardScreens/JobsDetailsSchreen";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/dashboard/terms" element={<TermsScreen />} />
         <Route path="/dashboard/terms/edit" element={<TermsScreenEdit />} />
         <Route path="/dashboard/terms/add" element={<TermsScreenAdd />} />
+        <Route path="/dashboard/jobsdetails" element={<JobsDetailsSchreen />} />
       </Routes>
     </Router>
     // Routing section End

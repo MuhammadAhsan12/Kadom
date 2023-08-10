@@ -1,0 +1,71 @@
+.main {
+    width: 100%;
+    height: 92vh;
+    padding: 0px 0px 20px 0px;
+    overflow-y: scroll;
+}
+
+.iconBack{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.box{
+    padding: 25px;
+    width: 100%;
+    border-right: 1px solid rgb(216, 216, 216);
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.boxRow{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.bottomBox{
+    padding: 30px;
+}
+
+.boxTitle{
+    padding: 20px 40px 20px 40px;
+    background-color: #F8F8FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottomBoxRow{
+    width: 100%;
+    padding: 35px;
+    border-right: 1px solid rgb(216, 216, 216);
+    border-left: 1px solid rgb(216, 216, 216);
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.boxFootor{
+    padding: 20px 40px 20px 40px;
+    border-right: 1px solid rgb(216, 216, 216);
+    border-left: 1px solid rgb(216, 216, 216);
+    border-bottom: 1px solid rgb(216, 216, 216);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details{
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.paym{
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding-bottom: 20px;
+    padding-top: 10px;
+    /* padding-right: 25px; */
+}
