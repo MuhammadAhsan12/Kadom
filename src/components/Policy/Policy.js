@@ -1,6 +1,5 @@
 import { Row, Col } from "react-bootstrap";
 import styles from "./Policy.module.css";
-import Date from '../Date/DMY'
 import { Link } from "react-router-dom";
 
 const TermsScreen = ({ pakagenamme, title, text }) => {
@@ -14,27 +13,27 @@ const TermsScreen = ({ pakagenamme, title, text }) => {
                     <div className={styles.contentCol}>
                         <Link to={`/dashboard/${pakagenamme}/add`} style={{ textDecoration: 'none' }}>
                             <div className={styles.contentMaterial}>
-                                <img style={{ width: '20px' }} src="/images/icons/addIcon.svg" />
-                                <h5 style={{ color: 'black' }} className="h2_main">Add</h5>
+                                <img src="/images/icons/addIcon.svg" />
+                                <h5 className="h2_main">Add</h5>
                             </div>
                         </Link>
                         <Link to={`/dashboard/${pakagenamme}/edit`} style={{ textDecoration: 'none' }}>
                             <div className={styles.contentMaterial}>
-                                <img style={{ width: '20px' }} src="/images/icons/editIcon.svg" />
-                                <h5 style={{ color: 'black' }} className="h2_main">Edit</h5>
+                                <img src="/images/icons/editIcon.svg" />
+                                <h5 className="h2_main">Edit</h5>
                             </div>
                         </Link>
                         <div className={styles.contentMaterial}>
-                            <img style={{ width: '20px' }} src="/images/icons/deleteIcon.svg" />
+                            <img src="/images/icons/deleteIcon.svg" />
                             <h5 className="h2_main">Delete</h5>
                         </div>
-                        <h5 className="h2_main" style={{ color: '#484848', fontSize: '18px', fontStyle: 'normal', fontWeight: '400' }}><Date /></h5>
+                        <h2 className="h3_main">14 July 2023, Friday</h2>
                     </div>
                 </Col>
             </Row>
             <Row className="gy-5">
                 <div className={styles.textDiv}>
-                    <p className={styles.showText}>{text}
+                    <p className={`para_main ${styles.showText}`}>{text}
                     </p>
                 </div>
             </Row>

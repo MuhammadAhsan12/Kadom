@@ -13,10 +13,11 @@
 }
 
 .box{
-    padding: 25px;
+    padding: 40px;
     width: 100%;
     border-right: 1px solid rgb(216, 216, 216);
     border-bottom: 1px solid rgb(216, 216, 216);
+    height: 100%;
 }
 
 .boxRow{
@@ -68,4 +69,15 @@
     padding-bottom: 20px;
     padding-top: 10px;
     /* padding-right: 25px; */
+}
+
+
+.personalDetails h2{
+    font-size: 15px;
+}
+
+@media(max-width: 1200px){
+    .personalDetails h2{
+        font-size: 12px;
+    }
 }

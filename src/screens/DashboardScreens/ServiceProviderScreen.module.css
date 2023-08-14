@@ -1,0 +1,126 @@
+.main {
+    width: 100%;
+    height: 92vh;
+    padding: 30px 0px 20px 0px;
+    overflow-y: scroll;
+}
+
+.main .maindiv{ 
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding-bottom: 20px;
+}
+
+.iconBack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.box {
+    /* margin-left: 25px;
+    margin-right: 25px; */
+    padding: 0px 20px 0px 20px;
+    width: 100%;
+}
+
+.boxRow {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.bottomBox {
+    padding: 0px;
+}
+
+.boxTitle {
+    padding: 18px 20px 18px 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #F8F8FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottomBoxRow {
+    width: 100%;
+}
+
+.bottomBox h3{
+    margin: 15px 25px 15px 25px;
+    font-size: 16px;
+}
+
+.details {
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.paym {
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding-bottom: 20px;
+    padding-top: 10px;
+    /* padding-right: 25px; */
+}
+
+li span {
+    position: relative;
+    left: -5px;
+}
+
+.detail{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    padding: 30px 25px 10px 25px;
+}
+
+.detail h2{
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.boxRow h3{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.boxRow h6{
+    font-size: 11px;
+}
+
+.boxRow img{
+    width: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxRow h2{
+    font-size: 16px;
+}
+
+.swiper{
+    padding: 15px 25px 15px 25px;
+}
+
+.swiperSlider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.swiperSlider img{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    background-color: white;
+}

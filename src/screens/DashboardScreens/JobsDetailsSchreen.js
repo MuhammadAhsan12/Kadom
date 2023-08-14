@@ -22,7 +22,7 @@ const JobsDetailsSchreen = () => {
             <Row className='gy-5'>
 
               {/* Box Left */}
-              <Col style={{ paddingRight: '0px' }} lg={6}>
+              <Col style={{ paddingRight: '0px', paddingLeft: '0px' }} lg={6}>
 
                 <div className={styles.box}>
                   <div className={styles.iconBack}>
@@ -42,7 +42,7 @@ const JobsDetailsSchreen = () => {
 
                     <div>
                       <div style={{ display: 'flex', flexDirection: 'row', gap: '0px' }}>
-                        <h1 className='h2_main'>Cooper Philips</h1><ul style={{ fontSize: '12px', marginTop: '3px' }}><li>Active</li></ul>
+                        <h1 className='h2_main'>Cooper Philips</h1><ul style={{ fontSize: '12px', marginTop: '3px' }}><li style={{ color: '#1FBBC2', marginLeft: '-8px' }}><span>Active</span></li></ul>
                       </div>
                       <div>
                         <h1 className='h3_main'>Lorem ipsum dolor sit amet consectetur. Amet mattis consectetur nisl pellentesque lobortis tortor in. Arcu sagittis duis egestas cras in vitae..</h1>
@@ -51,14 +51,14 @@ const JobsDetailsSchreen = () => {
                   </div>
 
 
-                  <div style={{ display: 'flex', flexDirection: 'row', gap: '20%', padding: '30px 70px 30px 3px', justifyContent: 'space-between' }}>
+                  <div className={styles.personalDetails} style={{ display: 'flex', flexDirection: 'row', gap: '20%', padding: '30px 70px 30px 3px', justifyContent: 'space-between' }}>
                     <div>
-                      <h1 className='h3_main'>Email address</h1>
-                      <h1 className='h2_main' style={{ fontSize: '15px' }}>Cooper@gmail.com</h1>
+                      <h3 className='h3_main'>Email address</h3>
+                      <h2 className='h2_main'>Cooper@gmail.com</h2>
                     </div>
                     <div>
-                      <h1 className='h3_main'>Phone Number</h1>
-                      <h1 className='h2_main' style={{ fontSize: '15px' }}>(310) 123 - 4567</h1>
+                      <h3 className='h3_main'>Phone Number</h3>
+                      <h2 className='h2_main'>(310) 123 - 4567</h2>
                     </div>
                   </div>
 
@@ -78,19 +78,18 @@ const JobsDetailsSchreen = () => {
 
                     <div>
                       <div style={{ display: 'flex', flexDirection: 'row', gap: '0px' }}>
-                        <h1 className='h2_main'>Floyd Miles</h1><ul style={{ fontSize: '12px', marginTop: '3px' }}><li>Active</li></ul>
+                        <h2 className='h2_main'>Floyd Miles</h2><ul style={{ fontSize: '12px', marginTop: '3px' }}><li style={{ color: '#1FBBC2', marginLeft: '-8px' }}><span>Active</span></li></ul>
                       </div>
                       <div>
-                        <h1 className='h3_main'>Lorem ipsum dolor sit amet consectetur. Amet mattis consectetur nisl pellentesque lobortis tortor in. Arcu sagittis duis egestas cras in vitae..</h1>
+                        <h3 className='h3_main'>Lorem ipsum dolor sit amet consectetur. Amet mattis consectetur nisl pellentesque lobortis tortor in. Arcu sagittis duis egestas cras in vitae..</h3>
                       </div>
                     </div>
                   </div>
 
-
-                  <div style={{ display: 'flex', flexDirection: 'row', gap: '20%', padding: '30px 70px 30px 3px', justifyContent: 'space-between' }}>
+                  <div className={styles.personalDetails} style={{ display: 'flex', flexDirection: 'row', gap: '20%', padding: '30px 70px 30px 3px', justifyContent: 'space-between' }}>
                     <div>
-                      <h1 className='h3_main'>Phone Number</h1>
-                      <h1 className='h2_main' style={{ fontSize: '15px' }}>(310) 123 - 4567</h1>
+                      <h3 className='h3_main'>Phone Number</h3>
+                      <h2 className='h2_main'>(310) 123 - 4567</h2>
                     </div>
                   </div>
 
@@ -115,8 +114,8 @@ const JobsDetailsSchreen = () => {
                         <h1 className='h3_main' style={{ marginTop: '30px', marginRight: '30px' }}>Hello Abdul, I need someone to mount 2 tv’s. I already have the mounts and the hardware. Let me know if you can get this done by today. Thank you!</h1>
                       </div>
 
-                      <div style={{marginTop: '25px'}}>
-                        <img src='/Images/black.png'/>
+                      <div style={{ marginTop: '25px' }}>
+                        <img src='/Images/black.png' />
                       </div>
 
                       <div className={styles.details} style={{ marginRight: '30px' }}>

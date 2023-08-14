@@ -1,0 +1,19 @@
+.service_provider_swiper {
+    cursor: pointer;
+}
+
+.service_provider_swiper .swiper-button-prev {
+    display: none;
+}
+
+.service_provider_swiper .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #5dd696;
+    border-radius: 50%;
+}
+
+.service_provider_swiper .swiper-button-next::after {
+    font-size: 15px;
+}
